@@ -1,0 +1,12 @@
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.DS_Store
+*/.DS_STORE/*
+__pycache__
+*/__pycache__/*
+datasets
+weights
+*.log
+*/*.png
+*/*.sh
+*/*.pdf
