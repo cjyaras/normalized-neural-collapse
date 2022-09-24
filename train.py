@@ -25,6 +25,7 @@ from datasets import create_dataset
 @click.option('--experiment-name', type=str, default=datetime.now().strftime('%m-%d-%Y-%H_%M_%S'), help='Experiment name.')
 @click.option('--random-labels', type=bool, default=False, help='Use random labels.')
 @click.option('--compute-test', type=bool, help='Compute test accuracy and NC metrics.', required=True)
+@click.option('--device', type=click.Choice(['cpu', 'gpu']), default='cpu')
 def train(**args):
    set_seed(0)
    args['num_classes'] = 10 if args['dataset'] == 'CIFAR10' else 100
